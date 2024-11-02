@@ -1,0 +1,51 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+
+% Figures
+\usepackage{graphicx}
+\usepackage{float}
+
+% Tables
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{booktabs}
+
+% BibTeX configuration
+\usepackage{biblatex}
+\bibliography{references} 
+\RequirePackage{doi}
+\usepackage{hyperref}
+
+
+
+
+\title{Assignment 1}
+\author{Yannick Lang\\
+    \small yannick-stephan.lang@stud.uni-bamberg.de}
+
+\date{ \vspace{0.5cm} \large 
+UxD-UIxD-M\\ 
+  \emph{Urban Interaction Design} \\ \vspace{0.2cm}
+  Otto-Friedrich-Universität Bamberg \\ \vspace{0.2cm}
+  Wintersemester 2024/25}
+
+
+
+\begin{document}
+
+% Custom Commands
+\newcommand{\IIC}{I\textsuperscript{2}C}
+
+\maketitle
+
+% Main contents
+\input{sections/10_introduction.tex}
+
+% Please clean your references! 
+% See https://sites.umiacs.umd.edu/elm/2018/12/13/the-art-of-clean-references/
+\printbibliography
+
+
+\end{document}
