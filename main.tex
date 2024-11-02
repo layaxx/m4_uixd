@@ -1,7 +1,7 @@
 \documentclass{article}
 
 \usepackage[utf8]{inputenc}
-
+\usepackage[ngerman]{babel}
 % Figures
 \usepackage{graphicx}
 \usepackage{float}
@@ -17,6 +17,7 @@
 \bibliography{references} 
 \RequirePackage{doi}
 \usepackage{hyperref}
+\usepackage{csquotes}
 
 
 
@@ -31,17 +32,19 @@ UxD-UIxD-M\\
   Otto-Friedrich-Universität Bamberg \\ \vspace{0.2cm}
   Wintersemester 2024/25}
 
-
-
 \begin{document}
-
-% Custom Commands
-\newcommand{\IIC}{I\textsuperscript{2}C}
 
 \maketitle
 
 % Main contents
-\input{sections/10_introduction.tex}
+\input{sections/10_lokalisierung.tex}
+\input{sections/11_trilateration.tex}
+\input{sections/12_gps-koordinaten.tex}
+\input{sections/13_distanz.tex}
+\input{sections/20_in-the-wild.tex}
+\input{sections/21_rssi.tex}
+\input{sections/22_wifi-scanning.tex}
+\input{sections/23_geo-caching.tex}
 
 % Please clean your references! 
 % See https://sites.umiacs.umd.edu/elm/2018/12/13/the-art-of-clean-references/
