@@ -16,6 +16,8 @@ lbs <- c("wigle" = "WiGLE WiFi", "wifidata" = "WiFi Data", "signalstrength" = "S
 ggplot(data=df, aes(x=distance, y=signal, group=app)) +
   geom_line(linetype = "dashed", aes(color=app))+
   geom_point(aes(color=app))+
-  #facet_wrap(~app, ncol=1, labeller=as_labeller(lbs))+
-#  theme(legend.position="none")
+  #geom_abline(slope = -1,intercept = -40)+
+  scale_x_continuous(trans='log10')+
+  facet_wrap(~app, ncol=1, labeller=as_labeller(lbs))+
+  theme(legend.position="none")
 

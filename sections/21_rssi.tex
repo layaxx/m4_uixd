@@ -27,13 +27,19 @@ Die Messwerte sind in in Grafik \ref{rssi} zu sehen. Im Anhang sind außerdem in
     \label{rssi}
 \end{figure}
 
-Bei allen drei Apps ist jedoch ein deutlicher Abfall der Signalstärke mit steigender Distanz zu erkennen. Der in etwa lineare Verlauf passt auch zur Erwartung, wenn man weiß, dass die Signalstärke zwar mit dem Quadrat der Distanz abnimmt, aber normalerweise in einer logarithmischen Einheit (Dezibel oder Dezibel-Milliwatt) gemessen wird. Theoretisch sollten die Messwerte mit steigender Distanz natürlich streng monoton fallen, was hier nicht immer der Fall ist. Dies könnte viele Ursachen haben, von Ungenauigkeiten der zur Messung verwendeten Hard- und Software über schwankende Sendeleistung des AP über die generelle  Umgebung, in der die Messungen durchgeführt wurden.
 
+Bei allen drei Apps ist jedoch ein deutlicher Abfall der Signalstärke mit steigender Distanz zu erkennen.
+Ob der in etwa lineare Verlauf in Wahrheit doch logarithmisch ist, wie nach \cite{reliable} eigentlich zu erwarten wäre, da die Signalstärke mit dem Quadrat der Distanz abnimmt, lässt sich mit den vorliegenden Daten schwer beurteilen. Abbildung \ref{rssi-log} zeigt auch einen Plot mit logarithmischer Distanz.
 
-Auch die Wertebereiche sind in etwa gleich, was darauf hindeutet, dass die Apps die Werte in etwa gleich skalieren.
+Theoretisch sollten die Messwerte mit steigender Distanz natürlich streng monoton fallen, was hier nicht immer der Fall ist.
+Dies könnte viele Ursachen haben, von Ungenauigkeiten der zur Messung verwendeten Hard- und Software über schwankende Sendeleistung des AP über die generelle Umgebung, in der die Messungen durchgeführt wurden.
 
 \subsubsection*{Einschränkungen}
-Die Genauigkeit der Messungen ist durch einige Faktoren eingeschränkt. Zum einen ist die Distanzmessung nicht exakt, da ich als Mass nur meine Schritte, in Kombination mit den Fließen des Bodens zur Verfügung hatte. Die Distanz in den Plots kann grob als Meter interpretiert werden. Zu einer genaueren Messung hätte ich ein Maßband oder ähnliches verwenden müssen. außerdem hätte dann auch die senkrechte Entfernung zwischen Tablet und AP einbezogen werden müssen, da dieser auf über 2m Höhe angebracht ist.
+Die Genauigkeit der Messungen ist durch einige Faktoren eingeschränkt. Einerseits gibt es Ungenauigkeiten der Messgeräte und Einflüsse der Umgebung, die bei RSSI-Messungen allgemein auftreten. Nach Awad et al. sind das unter anderem Reflexion, \enquote{multi-path propagation, reflection, and fading effects}\cite{adaptive}.
+
+Andererseits gibt es hier noch zwei spezielle Punkte, die die Messungen beeinflussen:
+
+Zum einen ist die Distanzmessung nicht exakt, da ich als Mass nur meine Schritte, in Kombination mit den Fließen des Bodens zur Verfügung hatte. Die Distanz in den Plots kann grob als Meter interpretiert werden. Zu einer genaueren Messung hätte ich ein Maßband oder ähnliches verwenden müssen. außerdem hätte dann auch die senkrechte Entfernung zwischen Tablet und AP einbezogen werden müssen, da dieser auf über 2m Höhe angebracht ist.
 
 Zum anderen wurden die Messreihen nacheinander durchgeführt, sodass sich die Umgebung durch andere Personen oder andere Störquellen verändert haben könnte. Auch die Positionierung des Tablets kann nicht exakt reproduziert werden, sodass die Messungen nicht exakt vergleichbar sind.
 
