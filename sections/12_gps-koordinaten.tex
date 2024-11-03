@@ -1,4 +1,5 @@
 \subsection{GPS Koordinaten}
+\label{sec:coord-conversion}
 
 Um Koordinaten zwischen den verschiedenen Formaten zu konvertieren, habe ich eine kleine Webapp geschrieben.
 
@@ -7,10 +8,10 @@ Dazu habe ich folgende Annahmen getroffen:
 \begin{itemize}[align=left, leftmargin=*]
     \item[\textbf{Google KML}] Hier handelt es sich um ein Dezimalgrad System, die Angaben werden als (lat, lon) gewertet (also wie (vermutlich) in der Angabe und nicht wie in den KML Dateien, die man bei GoogleMaps herunterladen kann). Die Wertebereiche sind (-90, 90) für lat und (-180, 180) für lon.
     \item[\textbf{NMEA 0132}] Mischung aus Grad und Dezimalminuten, also DDMM.MMM. führende Nullen werden gegebenenfalls nicht ausgegeben. Die Wertebereiche sind (0, 90) für lat und (0, 180) für lon, zusätzlich werden die Richtungen N, S, E, W angegeben.
-    \item[\textbf{JPEG EXIF}] Hier handelt es sich um ein Grad, Minuten, Sekunden System, die Angaben werden als (lat, lon) gewertet. Die Wertebereiche sind (-90, 90) für lat-Grad (-180, 180) für lon-Grad und jeweils (0, 60) für Minuten und Sekunden. Sekunden können Nachkommastellen haben. Statt der Vorzeichen bei den Grad kann die Richtung N, S, E, W angegeben werden. Grad, Minuten und Sekunden sind durch die jeweiligen Einheitenzeichen (°,',") oder durch Strickpunkte (;) getrennt
+    \item[\textbf{JPEG EXIF}] Hier handelt es sich um ein Grad, Minuten, Sekunden System, die Angaben werden als (lat, lon) gewertet. Die Wertebereiche sind (-90, 90) für lat-Grad (-180, 180) für lon-Grad und jeweils (0, 60) für Minuten und Sekunden. Sekunden können Nachkommastellen haben. Statt der Vorzeichen bei den Grad kann die Richtung N, S, E, W angegeben werden. Grad, Minuten und Sekunden sind durch die jeweiligen Einheitenzeichen (°,',") oder durch Strickpunkte (;) getrennt. Formate wie das auf Wikipedia verwendete (zu beachten: Richtungen nach statt vor den Koordinaten und zwar ähnliche aber andere Symbole für Minuten und Sekunden) werden aktuell nicht unterstützt.
 \end{itemize}
 
-Der Source Code ist unter \url{https://github.com/layaxx/coordinate-conversion} zu finden und auch anbei als Teil der Abgabe. Die WebApp kann durch Öffnen der Datei ``dist/index.html'' in einem Browser gestartet werden und ist auch unter \url{https://layaxx.github.io/coordinate-conversion} verfügbar.
+Der Source Code ist auf GitHub\footnote{\url{https://github.com/layaxx/coordinate-conversion}} zu finden und auch anbei als Teil der Abgabe. Die WebApp kann durch Öffnen der Datei \verb|dist/index.html| in einem Browser gestartet werden und ist im Internet\footnote{\url{https://layaxx.github.io/coordinate-conversion}} verfügbar.
 
 Es existiert ein Eingabefeld, in das Koordinaten in einem der oben beschriebenen Formate kopiert werden können. Die App erkennt das Format und berechnet automatisch die entsprechenden anderen Formate.
 

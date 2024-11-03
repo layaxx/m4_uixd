@@ -1,5 +1,4 @@
 \documentclass{article}
-
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 % Figures
@@ -19,8 +18,13 @@
 \usepackage{hyperref}
 \usepackage{csquotes}
 \usepackage{enumitem} 
+\usepackage{amsmath}
+\usepackage{empheq,etoolbox}
 
-
+\patchcmd{\subequations}% <cmd>
+  {\theparentequation\alph{equation}}% <search>
+  {\theparentequation.\arabic{equation}}% <replace>
+  {}{}% <success><failure>}
 
 
 \title{Assignment 1}
